@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 import About from "./components/About";
 import NewBookForm from "./components/NewBookForm";
 import Header from "./components/Header";
+import BookCard from "./components/BookCard";
 function App() {
   
 
@@ -20,6 +21,7 @@ function App() {
                               <Route path="/" element={<Home/>} />
                               <Route path="/About" element={<About/>} />
                               <Route path="/NewBookForm" element={<NewBookForm/>} />
+                              <Route path="/details/1" element={<BookCard/>} />
                       </Routes>
                 <Footer/>
         </Router>
