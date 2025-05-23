@@ -1,0 +1,53 @@
+/*STYLE FOR BOOK CARD*/
+
+.book-card{
+  margin:20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height:46.5rem;
+  
+}
+
+.book-details
+{
+  background-color: rgba(214, 189, 144, 0.788);
+  padding: 15px;
+  width: 20rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.book-details h3,h4
+{
+  padding:12px;
+}
+
+.book-details button
+{
+  margin:12px;
+  background: #926e2a;
+  padding: 10px;
+  border-radius: 5px;
+  width:4rem;
+}
+.rent-confirm
+{
+  background-color: rgba(214, 189, 144, 0.788);
+  padding: 15px;
+}
+
+.book-details img
+{
+  display:block;
+  width:100px;
+  height:110px;
+ 
+}
+.rentorback
+{
+  display:flex;
+  flex-direction: row;
+}

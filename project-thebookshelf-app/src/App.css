@@ -1,15 +1,10 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  
-}
+
 /*STYLE FOR ENTIRE APP*/
-.App
-{
-  background: url('./assets/AdobeStock_361448104_Preview.jpeg');
-  background-repeat: no-repeat;
-  background-size: 100vw 100vw;
+.App{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  
 }
 
 /*STYLE FOR NAV LINKS*/
@@ -53,7 +48,7 @@
 {
     text-align: center;
     padding: 3px;
-    
+    color:white; 
 }
 
 .footer span
@@ -61,43 +56,9 @@
   font-size:18px;
 }
 
-/*STYLE FOR ABOUT PAGE*/
-.about-container
-{
-    display: flex;
-    flex-direction: column;
-    justify-content:  center;
-    margin: 1.5rem;
-    background-color: rgba(214, 189, 144, 0.788);
-    padding:27px;
-}
 
-.about-container p
-{
-  margin:10px;
-  padding:5px;
-}
 
-.about-container h2
-{
-  margin:10px;
-}
 
-.about-container img
-{
-  width:40px;
-}
-
-/*STYLE FOR HOME PAGE*/
-
-.home-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100vh;
-    
-    
-}
 
 /*STYLE FOR GENRE SELECTION*/
  .genre-div
@@ -112,6 +73,7 @@
   font-size: 30px;
   padding:10px;
   margin:10px;
+  color:white; 
 }
 
 .genre-div select
@@ -121,33 +83,13 @@
   margin:5px;
 }
 
-/*STYLE FOR LISTING OF BOOKS */
-.book-images
-{
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  margin-top: 50px;
-  width:85vw;
-  height:35vh;
-  background-color: rgba(214, 189, 144, 0.788);
-  align-items: center;
-}
-.book-images img
-{
-  padding: 20px;
-  margin-top:15px;  
-}
 
-.book-images img:hover {
-  box-shadow: 0 0 2px 1px rgba(253, 252, 251, 0.993);
-}
 
 
 
 /*STYLE FOR RESPONSIVENESS*/
 
-@media (max-width:650px ) {
+@media (max-width:600px ) {
   .nav-links  {
     display: none;
     flex-direction: column;
@@ -173,30 +115,15 @@
     
   }
 
-  .home-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 650px;
-    
-}
-  .book-images
-  {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    width:480px;
-    height:300px;
-    background-color: rgba(214, 189, 144, 0.788);
-    align-items: center;
-  }
+  
 
   .App
   {
-    background: url('./assets/AdobeStock_361448104_Preview.jpeg');
+    background-image: url('./assets/AdobeStock_361448104_Preview.jpeg');
     background-repeat: no-repeat;
-    background-size: auto;
-    
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
   }
 
   .genre-div label,span
@@ -205,6 +132,17 @@
     padding:10px;
     margin:10px;
   }
+
+   .contact
+    {
+        width:20rem;
+        height:46.5rem;
+        background-color: rgba(214, 189, 144, 0.788);
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        
+    }
 }
 
 /*STYLE FOR REQUEST FORM*/
@@ -248,38 +186,4 @@
   height: 35px;
 }
 
-/*STYLE FOR BOOK CARD*/
 
-.book-card{
-  margin:20px;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height:46.5rem;
-}
-
-.book-details
-{
-  background-color: rgba(214, 189, 144, 0.788);
-  padding: 15px;
-}
-
-.book-details h3,h4
-{
-  padding:12px;
-}
-
-.book-details button
-{
-  margin:12px;
-  background: #926e2a;
-  padding: 10px;
-  border-radius: 5px;
-  width:4rem;
-}
-.rent-confirm
-{
-  background-color: rgba(214, 189, 144, 0.788);
-  padding: 15px;
-}

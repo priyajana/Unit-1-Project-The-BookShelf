@@ -1,0 +1,98 @@
+/*STYLE FOR HOME PAGE*/
+
+.home-container{
+   
+  display: flex;
+  flex-direction: column;
+  align-items: center;     /* horizontally center child elements */
+  padding:10px;
+  max-width: 1000px;
+  margin: 0 auto;           /* center the container in the page */
+  gap: 32px;
+  height: 85vh; 
+}
+    
+    
+
+/*STYLE FOR LISTING OF BOOKS */
+.books-parent
+{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  background-color: rgba(214, 189, 144, 0.788);
+ 
+}
+.book-child
+{
+  flex: 1 1 45%;
+  max-width: 20%;
+ margin: 0 auto;
+  
+}
+.book-child img
+{
+  display:block;
+  width:100px;
+  height:120px;
+  border: 2px solid transparent;  
+  border-radius: 6px;    
+  padding: 2px;
+  margin:25px;
+}
+
+.book-child img:hover {
+  box-shadow: 0 0 3px 4px rgba(253, 252, 251, 0.993);
+}
+
+.link-wrapper {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center; 
+  text-decoration: none;
+}
+.book-link
+{
+  color: #110ee6;
+	font-size:medium; 
+  display: inline-block;
+  margin-top: 0; 
+ 
+}
+
+/* Styling for cellphones*/
+@media (max-width:600px ) {
+  
+  
+  .book-child{
+    flex: 1 1 45%; /* Two items per row with some space */
+    max-width: 45%;
+  }
+  .book-child img {
+  width: 2.5rem;
+  height: 4rem;
+  display: block;
+}
+  
+}
+
+/*Styling for tablets*/
+@media (max-width: 900px) {
+    .books-parent {
+      justify-content: space-around;
+    }
+
+    .book-child {
+      flex: 1 1 22%;
+    max-width: 22%;
+    }
+
+    .genre-div {
+      font-size: 1.2rem;
+    }
+    .book-child img {
+    width: 2.5rem;
+    height: 4rem;
+    display: block;
+  }
+}

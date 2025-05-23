@@ -1,4 +1,6 @@
-import book from "../assets/icon-bookshelf.png";
+import book from '../../assets/icon-bookshelf.png';
+import './About.css';
+
 export default function About(){
     return(
     <div className="about-container">
