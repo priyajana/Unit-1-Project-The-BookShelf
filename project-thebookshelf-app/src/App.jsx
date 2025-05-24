@@ -27,10 +27,13 @@ export default function App() {
 
   const [bookList, setBookList] = useState(null);
   
-    useEffect(()=>{
-        fetchBooks(genres[0]).then(data=>{ setBookList(data);});
-       
-      
+    useEffect(()=>
+      {
+        // Added for cases when the user clicks back button from the bookcard and navigates to the home page. this uses the local storage to save genre and fetch books based on its value.
+      const savedGenre = localStorage.getItem('genre') || genres[0];
+        fetchBooks(savedGenre).then(data=>{ setBookList(data);});
+        
+      if(!localStorage.getItem("genre")){localStorage.setItem('genre', genres[0]);}
     },[]);
    
     bookList && console.log(bookList.items.length);
@@ -40,16 +43,19 @@ export default function App() {
       
       <div className="App">
         <Router>
+            <div className="page-layout">
               <Header/>
                        <Routes>
                               {/* Setting the path to display the Home component */}
                               <Route path="/" element={<Home bookList ={bookList} setBookList={setBookList} fetchBooks={fetchBooks} genres={genres}/>} />
                               <Route path="/genre/:genre" element={<Home bookList ={bookList} setBookList={setBookList} fetchBooks={fetchBooks} genres={genres}/>} />
                               <Route path="/About" element={<About/>} />
-                              <Route path="/NewBookForm" element={<NewBookForm/>} />
-                              <Route path="/details/:id" element={<BookCard bookDetails={bookList}/>} />
+                              <Route path="/NewBookForm" element={<NewBookForm genres={genres}/>} />
+                              <Route path="/details/:id" element={<BookCard bookDetails={bookList} />} />
+                              <Route path="/page/:page"  element={<Home bookList ={bookList} setBookList={setBookList} fetchBooks={fetchBooks} genres={genres}/>} />
                       </Routes>
                 <Footer/>
+            </div>
         </Router>
         
     

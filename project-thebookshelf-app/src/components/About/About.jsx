@@ -4,7 +4,8 @@ import './About.css';
 export default function About(){
     return(
     <div className="about-container">
-            <p>Welcome to The Bookshelf <img src={book}/>  – your personal reading companion and the smart shelf for your literary life.</p>
+        <h2>The BookShelf</h2>
+            <p>Welcome to The Bookshelf <img src={book}/>  – your personal reading companion and the smart shelf for your literary life !</p>
             <p>At The Bookshelf, we believe that books have the power to inspire, connect, and transform. 
             Whether you're a passionate reader, a casual book lover, or someone rediscovering the joy of reading, our app is designed to make your reading journey more meaningful and organized.
             </p>
@@ -18,7 +19,7 @@ export default function About(){
             <h2>Why We Built The Bookshelf</h2>
 
             <p>We were tired of juggling lists across apps, losing track of books we wanted to read, and missing out on thoughtful conversations around them.
-             So we built Bookshelf – a clean, intuitive app to bring all your reading needs together, whether you're flying solo or part of a book club.
+             So we built The Bookshelf – a clean, intuitive app to bring all your reading needs together, whether you're flying solo or part of a book club.
             </p>
             <h2>Join Us</h2>
 

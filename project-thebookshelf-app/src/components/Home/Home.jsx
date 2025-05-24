@@ -52,8 +52,8 @@ export default function Home({bookList,setBookList,fetchBooks,genres}){
            { 
             bookList && bookList.items.map((book,index)=>{
                 //console.log(book.id);
-                return <div className="book-child">
-                        <Link className="link-wrapper" key={index}to={`/details/${book.id}`}>
+                return <div className="book-child" key={index}>
+                        <Link className="link-wrapper" to={`/details/${book.id}`}>
                                 { 
                                     
                                     book.volumeInfo.imageLinks?
@@ -68,7 +68,10 @@ export default function Home({bookList,setBookList,fetchBooks,genres}){
                     })
            }
                 
-                
+           <div class="pagination">
+                        
+             <Link to= {`/page/${Link.value}`} value="1">1</Link>           
+           </div>     
           </div>
     </div>
     )

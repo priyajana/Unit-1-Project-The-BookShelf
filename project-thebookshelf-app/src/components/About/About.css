@@ -3,12 +3,14 @@
 {
     display: flex;
     flex-direction: column;
-    justify-content:  center;
-    margin: 1.5rem;
-    background-color: rgba(214, 189, 144, 0.788);
-    padding:27px;
+    
+    margin:5px;
+    /* background-color: rgba(214, 189, 144, 0.788); */
+    height:100%;
 }
-
+h2{
+  margin:0 auto;
+}
 .about-container p
 {
   margin:10px;

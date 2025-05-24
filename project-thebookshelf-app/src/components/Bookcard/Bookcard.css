@@ -12,30 +12,35 @@
 
 .book-details
 {
-  background-color: rgba(214, 189, 144, 0.788);
+  /* background-color: rgba(214, 189, 144, 0.788); */
+  background-color: rgba(135, 207, 235, 0.315);
   padding: 15px;
   width: 20rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: left;
+  border-radius: 5px;
+  margin:20px;
 }
 
 .book-details h3,h4
 {
-  padding:12px;
+  padding-left:12px;
+  
 }
 
 .book-details button
 {
   margin:12px;
-  background: #926e2a;
+  /* background: #926e2a; */
+  background: skyblue;
   padding: 10px;
   border-radius: 5px;
   width:4rem;
 }
 .rent-confirm
 {
-  background-color: rgba(214, 189, 144, 0.788);
+  background: rgb(62, 138, 168);
   padding: 15px;
 }
 
