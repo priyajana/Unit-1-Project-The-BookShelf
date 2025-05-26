@@ -20,12 +20,14 @@
     
     flex-direction: row;
     /* background-color: rgb(206, 164, 74); */
-    background-color:skyblue;
+    /* background-color:skyblue; */
+    background-color: rgb(88, 17, 17);
    
 }
 .header .headerlinks{
   text-decoration: none;
-  color:black;
+  color:white;
+  font-size: 18px;
 }
 .nav-links
 {
@@ -39,7 +41,8 @@
 }
 .nav-links li:hover {
   /* background: #926e2a; */
-  background: rgb(62, 138, 168);
+  /* background: rgb(62, 138, 168); */
+  background: rgb(95, 94, 93);
   border-radius: 5px;
 }
 
@@ -70,14 +73,16 @@
 {
     text-align: center;
     padding: 3px;
-    /* color:white;  */
+    color:white; 
+    
     /* background-color: rgb(206, 164, 74); */
-    background-color:skyblue;
+    /* background-color:skyblue; */
+    background-color: rgb(88, 17, 17);
 }
 
 .footer span
 {
-  font-size:18px;
+  font-size:13px;
 }
 
 
@@ -161,7 +166,7 @@
     {
         width:20rem;
         height:46.5rem;
-        background-color: rgba(214, 189, 144, 0.788);
+        background-color:rgba(100, 23, 4, 0.336);
         padding: 15px;
         display: flex;
         flex-direction: column;
@@ -184,7 +189,7 @@
         width:25rem;
         height:46.5rem;
         /* background-color: rgba(214, 189, 144, 0.788); */
-        background-color:rgba(135, 207, 235, 0.473);
+        background-color:rgba(100, 23, 4, 0.336);
         padding: 15px;
         display: flex;
         flex-direction: column;
@@ -204,11 +209,12 @@
 .contact button
 {
   width:5rem;
-  background: skyblue;
+  background: black;
   margin-left:10px;
   margin-top:40px;
   border-radius: 5px;
   height: 35px;
+  color:white;
 }
 
 

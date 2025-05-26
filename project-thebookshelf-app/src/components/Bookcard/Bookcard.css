@@ -40,8 +40,10 @@
 }
 .rent-confirm
 {
-  background: rgb(62, 138, 168);
+  background: rgb(162, 219, 241);
   padding: 15px;
+  width:350px;
+  border-radius: 5px;
 }
 
 .book-details img
