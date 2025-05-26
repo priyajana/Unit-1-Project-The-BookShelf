@@ -34,17 +34,17 @@ export default function Home({bookList,setBookList,fetchBooks,genres, startIndex
        
     
 
-    // To set the selected genre to the element 
+    // To set the selected genre and fetchbooks
     function handleChange(e)
     {
        
         let new_genre = e.target.value;
-        let index = 0;
+        // let index = 0;
         setGenre(new_genre);
         setStartIndex(0);
         localStorage.setItem('genre',new_genre);
         console.log("Genre Changed"+localStorage.getItem('genre'));
-        fetchBooks(new_genre,index).then(data=>{ return setBookList(data);});      
+        //fetchBooks(new_genre,index).then(data=>{ return setBookList(data);});      
         
     }
 
@@ -52,7 +52,7 @@ export default function Home({bookList,setBookList,fetchBooks,genres, startIndex
         let index =  e.target.getAttribute('data-index');
         console.log("click page---->"+index);
         setStartIndex(index);
-        fetchBooks(selectedGenre,index).then(data=>{ return setBookList(data);}); 
+       // fetchBooks(selectedGenre,index).then(data=>{ return setBookList(data);}); 
     }
     return(
     <div className ="home-container">

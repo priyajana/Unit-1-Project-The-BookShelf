@@ -8,6 +8,7 @@ import NewBookForm from "./components/NewBookForm";
 import Header from "./components/Header";
 import BookCard from "./components/Bookcard/BookCard";
 import { useState,useEffect } from "react";
+import Rentals from "./components/Rentals/Rentals";
 
 
 
@@ -30,7 +31,11 @@ export default function App() {
 
   const [bookList, setBookList] = useState(null);
   const [startIndex,setStartIndex] = useState(0);
-  
+
+  // For storing rental books.
+  if(!localStorage.getItem("rentals")){
+      localStorage.setItem("rentals",JSON.stringify([]));
+  }
     useEffect(()=>
       {
         // Added for cases when the user clicks back button from the bookcard and navigates to the home page. this uses the local storage to save genre and fetch books based on its value.
@@ -51,9 +56,10 @@ export default function App() {
               <Header/>
                        <Routes>
                               {/* Setting the path to display the Home component */}
-                              <Route path="/" element={<Home bookList ={bookList} setBookList={setBookList} fetchBooks={fetchBooks} genres={genres} startIndex={startIndex} setStartIndex={setStartIndex}/>} />
-                              <Route path="/genre/:genre" element={<Home bookList ={bookList} setBookList={setBookList} fetchBooks={fetchBooks} genres={genres}/>} />
+                              <Route path="/" element={<Home bookList ={bookList} setBookList={setBookList} fetchBooks={fetchBooks} genres={genres} startIndex={startIndex} setStartIndex={setStartIndex} />} />
+                              <Route path="/genre/:genre" element={<Home bookList ={bookList} setBookList={setBookList} fetchBooks={fetchBooks} genres={genres}/> }/>
                               <Route path="/About" element={<About/>} />
+                              <Route path="/rentals" element={<Rentals />}/>
                               <Route path="/NewBookForm" element={<NewBookForm genres={genres}/>} />
                               <Route path="/details/:id" element={<BookCard bookDetails={bookList} />} />
                               

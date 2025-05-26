@@ -1,7 +1,14 @@
+/**
+ * REFERENCES
+ * https://stackoverflow.com/questions/3357553/how-do-i-store-an-array-in-localstorage
+ */
+
 import { useState } from "react"
 import './Bookcard.css';
 import { Link, useParams } from "react-router-dom";
 import dummy from '../../assets/book.png';
+import Custombutton from "../shared/Custombutton";
+
 
 export default function BookCard({bookDetails}){
 
@@ -16,7 +23,13 @@ export default function BookCard({bookDetails}){
     const targetBook = bookDetails.items.filter((book)=>book.id===id);
 
    console.log(targetBook? targetBook[0].volumeInfo.title:'');
-    
+   
+    function addBook(){
+         setrentConfirm(!rentConfirm);
+         let rentalBooks = JSON.parse(localStorage.getItem("rentals"));
+         rentalBooks.push(targetBook[0].volumeInfo.title);
+         localStorage.setItem("rentals",JSON.stringify(rentalBooks));
+    }
     return(
         <div className="book-card">
          { !rentConfirm && 
@@ -37,8 +50,9 @@ export default function BookCard({bookDetails}){
                 <h4>Genre: {targetBook? targetBook[0].volumeInfo.categories[0]:''} </h4>
 
                 <div className="rentorback">
-                    <button type="submit" onClick={() => setrentConfirm(!rentConfirm)}>Rent</button>
-                    <Link className="link-wrapper" key="back" to={`/`}><button type="button">Back</button></Link>
+                    <Custombutton onClick={addBook} buttonname="Rent"/>
+                    
+                    <Link className="link-wrapper" key="back" to={`/`}><Custombutton buttonname="Back"/></Link>
                 </div>
                </div> 
 

@@ -1,7 +1,8 @@
 import { useState } from "react";
-
-
+import Custombutton from "./shared/Custombutton";
 export default function NewBookForm({genres}){
+
+
     const[success,setsuccess] =useState(false);
   
     function handleForm(e){
@@ -12,9 +13,9 @@ export default function NewBookForm({genres}){
        
         <div className="new-book-container">
              {!success && 
-            <form action="/submit" method="post">
+            <form action="/submit" method="post" className="newbookform">
                <fieldset className="contact">
-                        <h3>Book not found? Send us a request!</h3>        
+                        <h3>Book not found? &nbsp;Send us a request!</h3>        
                        
                         <label >Your Name:</label>
                         <input type="text" id="name" name="name" placeholder="Enter your name"  required/>
@@ -38,12 +39,12 @@ export default function NewBookForm({genres}){
                         </select>
                         <label >Genre different?</label>
                         <input type="text" id="diffgenre" name="diffgenre" placeholder="Enter the genre" />
-
-                        <button type="button" id="submitBtn" onClick={handleForm} >Submit</button>
+                        <Custombutton onClick={handleForm} buttonname={"Submit"}/>
+                        
                 </fieldset>
             </form>
             }
-            <div className="success" style={{minHeight:'100%'}}>
+            <div className="success">
                 {success&& <span>Thank you for the request !</span>}
             </div>
          </div>

@@ -4,7 +4,8 @@ import { Link } from "react-router-dom"
 export default function Header(){
      const [menuOpen, setMenuOpen] = useState(false);
     
-    
+    const rentalList = JSON.parse(localStorage.getItem("rentals"));
+
     
     return(
             <header className="header">
@@ -15,7 +16,7 @@ export default function Header(){
                     <li><Link className="headerlinks" key='newbook' to="/NewBookForm">Request a new book</Link></li>
                                                 
                     </ul>
-                    <Link  key="mybooks" to="/mybooks"><label className="mybooks">My Books</label></Link>
+                    <Link className="mybooks" key="rentals" to="/rentals">My Books ({rentalList.length}) </Link>
                 <div className="menu-toggle" onClick={() =>setMenuOpen(!menuOpen) }>
                         &#9776;
                 </div>

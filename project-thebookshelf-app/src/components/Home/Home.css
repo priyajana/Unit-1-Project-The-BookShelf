@@ -22,7 +22,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 5px;
-  
+  height:100%;
   /* background-color: rgba(214, 189, 144, 0.788); */
   
 }
@@ -45,7 +45,8 @@
 }
 
 .book-child img:hover {
-  box-shadow: 0 0 3px 4px rgb(62, 138, 168);
+  /* box-shadow: 0 0 3px 4px rgb(62, 138, 168); */
+  background-color: rgb(155, 14, 14);
 }
 
 .link-wrapper {
@@ -62,6 +63,30 @@
   margin-top: 0; 
  
 }
+
+/*STYLE FOR GENRE SELECTION*/
+ .genre-div
+{
+  display:flex;
+  flex-direction: row;
+  margin:1rem;
+  
+}
+.genre-div label,span
+{
+  font-size: 25px;
+  padding:10px;
+  margin:10px;
+  /* color:white;  */
+}
+
+.genre-div select
+{
+  font-size: 20px;
+  padding:3px;
+  margin:5px;
+}
+
 
 /* Styling for cellphones*/
 @media (max-width:600px ) {
@@ -100,16 +125,18 @@
   }
 }
 
-.pagination {
-  display:flex;
-  flex-direction: row;
-  align-items: center;
+.pagination
+{
+   display: flex;
+  justify-content: center;  
+  width: 100%;              
+  
 }
 
 .pagination a {
-  color:skyblue;
+  color: rgb(88, 17, 17);
   text-decoration: underline;
-  float: left;
+  
   padding: 8px 16px;
-  text-decoration: none;
+  text-decoration: underline;
 }
