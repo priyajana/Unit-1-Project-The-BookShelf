@@ -41,9 +41,9 @@ export default function App() {
         fetchBooks(savedGenre,startIndex).then(data=>{ setBookList(data);});
         
       if(!localStorage.getItem("genre")){localStorage.setItem('genre', genres[0]);}
-      setRentals(JSON.parse(localStorage.getItem("rentals")));
+      setRentals(JSON.parse(localStorage.getItem("rentals"))||[]);
     },[]);
-    console.log(bookList);
+    //console.log(bookList);
     //bookList && console.log(bookList.items.length);
 
   return (
@@ -60,7 +60,7 @@ export default function App() {
                               <Route path="/About" element={<About/>} />
                               <Route path="/rentals" element={<Rentals rentalBooks={rentalBooks} setRentals={setRentals} />}/>
                               <Route path="/NewBookForm" element={<NewBookForm genres={genres}/>} />
-                              <Route path="/details/:id" element={<BookCard bookDetails={bookList} />} />
+                              <Route path="/details/:id" element={<BookCard bookDetails={bookList} rentalBooks={rentalBooks} setRentals={setRentals}/>} />
                               
                       </Routes>
                 <Footer/>

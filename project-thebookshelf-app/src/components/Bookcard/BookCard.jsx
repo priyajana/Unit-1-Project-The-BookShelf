@@ -10,11 +10,11 @@ import dummy from '../../assets/book.png';
 import Custombutton from "../shared/Custombutton";
 
 
-export default function BookCard({bookDetails}){
+export default function BookCard({bookDetails,rentalBooks,setRentals}){
 
     const {id} = useParams();
     console.log(id);
-
+    
     const original_genre = localStorage.getItem('genre');
     console.log("Genre selected was---->"+original_genre);
 
@@ -22,13 +22,15 @@ export default function BookCard({bookDetails}){
 
     const targetBook = bookDetails.items.filter((book)=>book.id===id);
 
-   console.log(targetBook? targetBook[0].volumeInfo.title:'');
+   //console.log(targetBook? targetBook[0].volumeInfo.title:'');
    
     function addBook(){
          setrentConfirm(!rentConfirm);
-         let rentalBooks = JSON.parse(localStorage.getItem("rentals"));
-         rentalBooks.push(targetBook[0].volumeInfo.title);
+         //let rentalBooks = JSON.parse(localStorage.getItem("rentals"));
+         
+         rentalBooks && rentalBooks.push(targetBook[0].volumeInfo.title);
          localStorage.setItem("rentals",JSON.stringify(rentalBooks));
+         setRentals(rentalBooks);
     }
     return(
         <div className="book-card">

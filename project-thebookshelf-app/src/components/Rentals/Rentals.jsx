@@ -1,6 +1,7 @@
 import {  useEffect } from "react";
 import Custombutton from "../shared/Custombutton";
 import  './../Rentals/Rentals.css';
+import { Link } from "react-router-dom";
 
 export default function Rentals({rentalBooks,setRentals}){
 
@@ -18,7 +19,7 @@ export default function Rentals({rentalBooks,setRentals}){
         let name = e.target.value;
         let oldArray = JSON.parse(localStorage.getItem("rentals"))||[];
         let newArray = oldArray.filter((item)=>item!=name && item!=null);
-        //console.log(newArray);
+        console.log("New---->"+newArray);
        localStorage.setItem("rentals",JSON.stringify(newArray));
        setRentals(newArray);
    }
@@ -26,7 +27,7 @@ export default function Rentals({rentalBooks,setRentals}){
     <div className="rentals">
             <div className="rentalItems">
             {
-                rentalBooks.length > 0 ? 
+                rentalBooks && rentalBooks.length > 0? 
                         <table className="rentals-table">
                             <thead>
                                 <tr>
@@ -51,7 +52,8 @@ export default function Rentals({rentalBooks,setRentals}){
                         </table>
                 
                     :<h4>No rental books.</h4>
-            }        
+            }      
+           <Link className="link-wrapper" key="back" to={`/`}>Back</Link>   
             </div>
     </div>
     )
