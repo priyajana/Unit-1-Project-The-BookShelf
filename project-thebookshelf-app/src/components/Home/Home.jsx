@@ -16,9 +16,13 @@ import {  useEffect, useState } from "react";
 export default function Home({bookList,setBookList,fetchBooks,genres, startIndex,setStartIndex}){
    
    console.log("Start index===",startIndex);
+
+ 
     // using state to keep track of genre selection
     const [selectedGenre,setGenre] =  useState(localStorage.getItem('genre',''));
+    
 
+     
     // The below useeffect is for updating the page with new list of books as the user clicks on page or changes genre.
     // This useeffect will get triggered each time there is change to the genre or startindex state variable.
     
@@ -37,7 +41,7 @@ export default function Home({bookList,setBookList,fetchBooks,genres, startIndex
     // To set the selected genre and fetchbooks
     function handleChange(e)
     {
-       
+      
         let new_genre = e.target.value;
         // let index = 0;
         setGenre(new_genre);
@@ -87,14 +91,15 @@ export default function Home({bookList,setBookList,fetchBooks,genres, startIndex
                     </div>
                     })
            }
-                
+            {   
            <div className="pagination">
            <a href="#" onClick={changePage} data-index="0">1</a>
-           <a href="#" onClick={changePage} data-index="10">2</a>  
-           <a href="#" onClick={changePage} data-index="20">3</a>  
-           <a href="#" onClick={changePage} data-index="30">4</a>  
-           <a href="#" onClick={changePage} data-index="40">5</a>                     
+           <a href="#" onClick={changePage} data-index="1">2</a>  
+           <a href="#" onClick={changePage} data-index="2">3</a>  
+           <a href="#" onClick={changePage} data-index="3">4</a>  
+           <a href="#" onClick={changePage} data-index="4">5</a>                     
            </div>     
+            }
           </div>
     </div>
     )

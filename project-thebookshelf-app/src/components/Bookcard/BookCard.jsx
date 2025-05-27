@@ -50,7 +50,7 @@ export default function BookCard({bookDetails}){
                 <h4>Genre: {targetBook? targetBook[0].volumeInfo.categories[0]:''} </h4>
 
                 <div className="rentorback">
-                    <Custombutton onClick={addBook} buttonname="Rent"/>
+                    <Custombutton onClick={addBook} type="button" buttonname="Rent"/>
                     
                     <Link className="link-wrapper" key="back" to={`/`}><Custombutton buttonname="Back"/></Link>
                 </div>
