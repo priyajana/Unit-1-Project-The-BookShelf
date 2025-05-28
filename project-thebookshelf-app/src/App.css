@@ -1,14 +1,14 @@
 
 /*STYLE FOR ENTIRE APP*/
 .App{
-  min-height:100%
+  height:100%
   
 }
 .page-layout {
   display: flex;
   flex-direction: column;
   min-height: 100%;
-  height: 100%;
+  
 }
 
 /*STYLE FOR NAV LINKS*/
