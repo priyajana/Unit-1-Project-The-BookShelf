@@ -6,7 +6,7 @@
     
     margin:5px;
     /* background-color: rgba(214, 189, 144, 0.788); */
-    height:100%;
+    min-height: 100%;
 }
 h2{
   margin:0 auto;
@@ -37,6 +37,7 @@ h2{
   margin:5px;
   padding:5px;
   font-size: 12px;
+  
 }
 
 .about-container h2
