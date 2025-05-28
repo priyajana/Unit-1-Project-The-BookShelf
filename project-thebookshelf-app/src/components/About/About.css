@@ -1,12 +1,15 @@
 /*STYLE FOR ABOUT PAGE*/
 .about-container
 {
-    display: flex;
+    /* display: flex;
+
     flex-direction: column;
-    
     margin:5px;
-    /* background-color: rgba(214, 189, 144, 0.788); */
-    min-height: 100%;
+    /* background-color: rgba(214, 189, 144, 0.788); 
+    min-height: 100%; */
+
+    flex: 1;
+  padding: 20px;
 }
 h2{
   margin:0 auto;
@@ -30,7 +33,9 @@ h2{
 
 /* Styling for cellphones*/
 @media (max-width:600px ) {
-  
+  .about-container{
+     min-height: 100%;
+  }
   
  .about-container p
 {
