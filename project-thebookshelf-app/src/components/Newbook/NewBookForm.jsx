@@ -62,9 +62,9 @@ export default function NewBookForm({genres}){
         if (Object.keys(newErrors).length === 0) {
             // Form submission logic here
             setsuccess(true);
-            console.log('Form submitted successfully!');
+           // console.log('Form submitted successfully!');
         } else {
-            console.log('Form submission failed due to validation errors.');
+           // console.log('Form submission failed due to validation errors.');
         }
     }
 

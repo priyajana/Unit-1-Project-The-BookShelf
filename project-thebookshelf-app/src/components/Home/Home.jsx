@@ -15,7 +15,7 @@ import {  useEffect, useState } from "react";
 
 export default function Home({bookList,setBookList,fetchBooks,genres, startIndex,setStartIndex}){
    
-   console.log("Start index===",startIndex);
+   //console.log("Start index===",startIndex);
 
  
     // using state to keep track of genre selection
@@ -30,7 +30,7 @@ export default function Home({bookList,setBookList,fetchBooks,genres, startIndex
          {
            
            const savedGenre = selectedGenre || localStorage.getItem('genre') || genres[0];
-           console.log({startIndex});
+           //console.log({startIndex});
            fetchBooks(savedGenre,startIndex).then(data=>{ setBookList(data);});
            
          if(!localStorage.getItem("genre")){localStorage.setItem('genre', genres[0]);}
@@ -54,7 +54,7 @@ export default function Home({bookList,setBookList,fetchBooks,genres, startIndex
 
     function changePage(e){
         let index =  e.target.getAttribute('data-index');
-        console.log("click page---->"+index);
+        //console.log("click page---->"+index);
         setStartIndex(index);
        // fetchBooks(selectedGenre,index).then(data=>{ return setBookList(data);}); 
     }

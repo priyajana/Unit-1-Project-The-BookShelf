@@ -22,7 +22,7 @@ async function fetchBooks(subject, startIndex)
         //https://www.googleapis.com/books/v1/volumes?q=subject:${subject}&maxResults=12
         const response = await fetch(`https://www.googleapis.com/books/v1/volumes?q=subject::${subject}&startIndex=${startIndex}&maxResults=12`)
          const data = await response.json();
-          console.log(response.status);
+         // console.log(response.status);
           return data;
 
   }

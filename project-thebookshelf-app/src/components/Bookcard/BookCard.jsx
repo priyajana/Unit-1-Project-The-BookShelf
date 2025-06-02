@@ -13,10 +13,10 @@ import Custombutton from "../shared/Custombutton";
 export default function BookCard({bookDetails,rentalBooks,setRentals}){
 
     const {id} = useParams();
-    console.log(id);
+    //console.log(id);
     
-    const original_genre = localStorage.getItem('genre');
-    console.log("Genre selected was---->"+original_genre);
+    //const original_genre = localStorage.getItem('genre');
+   // console.log("Genre selected was---->"+original_genre);
 
     const[rentConfirm, setrentConfirm] = useState(false);
 

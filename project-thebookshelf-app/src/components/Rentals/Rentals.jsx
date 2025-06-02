@@ -19,7 +19,7 @@ export default function Rentals({rentalBooks,setRentals}){
         let name = e.target.value;
         let oldArray = JSON.parse(localStorage.getItem("rentals"))||[];
         let newArray = oldArray.filter((item)=>item!=name && item!=null);
-        console.log("New---->"+newArray);
+       // console.log("New---->"+newArray);
        localStorage.setItem("rentals",JSON.stringify(newArray));
        setRentals(newArray);
    }
